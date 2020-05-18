@@ -1,26 +1,33 @@
 <template>
   <div class="home">
     <Header />
-    <img alt="Vue logo" src="../assets/logo.png">
-    
-    
+    <Jumbotron />
     <Static />
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <AdvCard />
+    <!-- <ImgAdv /> -->
+    <!-- <TextCard /> -->
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
 import Static from '@/components/Static.vue'
 import Header from '@/components/Header.vue'
+import Jumbotron from '@/components/Jumbotron.vue'
+import AdvCard from '@/components/AdvCard.vue'
+// import ImgAdv from '@components/ImgAdv.vue'
+// import TextCard from '@components/TextCard.vue'
+
 
 export default {
   name: 'Home',
   components: {
-    HelloWorld,
     Static,
-    Header
+    Header,
+    Jumbotron,
+    AdvCard,
+    // ImgAdv,
+    // TextCard
   }
 }
 </script>

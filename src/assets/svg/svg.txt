@@ -1,0 +1,26 @@
+Twitter
+
+<svg 
+ xmlns="http://www.w3.org/2000/svg"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ width="NaN%" height="NaN%">
+<image  x="0px" y="0px" width="46px" height="48px"  xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAC4AAAAwAgMAAAATC6BPAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAACVBMVEWBs9KBs9L///+YANxdAAAAAXRSTlPtnl1GowAAAAFiS0dEAmYLfGQAAAAHdElNRQfkBRIPOivxuINUAAAAFklEQVQoz2NgQAahCBAwyhnlUIeDDABb07ZjkvD4GAAAAABJRU5ErkJggg==" />
+</svg>
+
+
+Facebook 
+
+<svg 
+ xmlns="http://www.w3.org/2000/svg"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ width="NaN%" height="NaN%">
+<image  x="0px" y="0px" width="46px" height="48px"  xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAC4AAAAwBAMAAACcS1XvAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAElBMVEWBs9KBs9KBs9KBs9KBs9L///91eiHNAAAABHRSTlPb7f3rdTa/8QAAAAFiS0dEBfhv6ccAAAAHdElNRQfkBRIPOzUSrI92AAAAJklEQVQ4y2NgFMQGBBhUXLABJwYTrOLOo+Kj4qPio+I4yw0c5QwAwj8Y1Am4DrAAAAAASUVORK5CYII=" />
+</svg>
+
+Youtube
+<svg 
+ xmlns="http://www.w3.org/2000/svg"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ width="NaN%" height="NaN%">
+<image  x="0px" y="0px" width="46px" height="48px"  xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAC4AAAAwAgMAAAATC6BPAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAACVBMVEWBs9KBs9L///+YANxdAAAAAXRSTlPtnl1GowAAAAFiS0dEAmYLfGQAAAAHdElNRQfkBRIQAAUfvbSvAAAAFklEQVQoz2NgQAahCBAwyhnlUIeDDABb07ZjkvD4GAAAAABJRU5ErkJggg==" />
+</svg>
