@@ -1,23 +1,25 @@
 <template>
   <div class="wraper"> 
   <b-jumbotron text-variant="white">
-    <img src='../assets/main-text-1.png'><br>
-    <img src='../assets/main-text-2.png'>
-    <!-- <template v-slot:header>SEDONA</template> -->
-    <!-- <h1>SEDONA</h1> -->
-    <img src='../assets/sedona.png'>
-    <img src='../assets/main-text-3.png'>
-    <div class="title-reasons">
-        <h2>A small city in Arizona<br> that deserves more attention</h2>
-        <p>Take a look on 5 reasons why Sedona even cooler than a Grand Canyon!</p>
+
+    <div class="">
+        <img src='../assets/main-text-1.png'>
     </div>
 
+    <img src='../assets/main-text-2.png'><br>
+    <div class='main-text'>
+        <img src='../assets/sedona.png'>
+    </div>
+    <div>
+        <img src='../assets/main-text-3.png'>
+    </div>
+  
   </b-jumbotron>
 </div>
 </template>
 
 <script>
-export default {
+export default { 
 
 }
 </script>
@@ -29,8 +31,13 @@ h1 {
 }
 
 .jumbotron {
+    margin: 0px;
     border-radius:  0px;
     background-image: url('../assets/main-bgr.jpg');
+    height: 510px;
+}
+.title-reasons {
+
 }
 
 </style>

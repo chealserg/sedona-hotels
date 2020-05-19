@@ -18,6 +18,7 @@
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
+  text-transform: capitalize;
 }
 
 #nav {
@@ -31,5 +32,12 @@
 
 #nav a.router-link-exact-active {
   color: #42b983;
+}
+
+h1,
+h2,
+h3,
+p {
+  text-transform: capitalize;
 }
 </style>
