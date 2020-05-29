@@ -1,20 +1,22 @@
 <template>
-  <div class="wraper"> 
-  <b-jumbotron text-variant="white">
-
-    <div class="">
-        <img src='../assets/main-text-1.png'>
-    </div>
-
-    <img src='../assets/main-text-2.png'><br>
-    <div class='main-text'>
-        <img src='../assets/sedona.png'>
-    </div>
-    <div>
-        <img src='../assets/main-text-3.png'>
-    </div>
-  
-  </b-jumbotron>
+  <div class="wraper main-screen"> 
+   <b-row class="main-screen">
+    <b-col></b-col>
+    <b-col class="align-images">
+             <div class="d-block">
+                <img src="../assets/welcome.png">
+                <img class="undertext" src="../assets/welcomeText.png">
+            </div>
+             
+            <div class="main-screen-img">
+                 <img src="../assets/sedona.png">
+             </div>
+            <div class="main-screen-img">
+                <img src="../assets/main-text-italic.png">
+            </div>
+    </b-col>
+    <b-col></b-col>
+  </b-row>
 </div>
 </template>
 
@@ -26,19 +28,56 @@ export default {
 
 <style scoped>
 
-h1 {
-    font-size: 120px;
-}
 
-.jumbotron {
-    margin: 0px;
-    border-radius:  0px;
+.main-screen {
+    margin-top: -10px;
+    position: relative;
     background-image: url('../assets/main-bgr.jpg');
     height: 510px;
+    background-position: -60px -60px;
 }
-.title-reasons {
 
+
+.row.main-screen {
+    margin: 0;
 }
+
+.align-images.col {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+img.undertext {
+    margin-top: 20px;
+}
+
+.wraper.main-screen:after {
+    content: "";
+    position: absolute;
+    background: #ffffff;
+    height: 60px;
+    width: 300px;
+    right: -5px;
+    bottom: -20px;
+    transform: rotate(-5deg);
+    z-index: 1002;
+}
+
+.wraper.main-screen:before {
+    content: "";
+    position: absolute;
+    background: #ffffff;
+    height: 60px;
+    width: 300px;
+    bottom: -20px;
+    left: -5px;
+    transform: rotate(5deg);
+    z-index: 1002;
+}
+
+
 
 </style>
 

@@ -1,10 +1,10 @@
 <template>
   <div class="container">
     <div id="app">
-      <div id="nav">
-        <router-link to="/">Home</router-link> |
-        <router-link to="/about">About</router-link>
-      </div>
+      <!-- <div id="nav"> -->
+        <!-- <router-link to="/">Home</router-link> |
+        <router-link to="/about">About</router-link> -->
+      <!-- </div> -->
       <router-view/>
     </div>
   </div>
@@ -18,7 +18,11 @@
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  text-transform: capitalize;
+  text-transform: uppercase;
+}
+
+#app {
+  padding:0 !important;
 }
 
 #nav {
@@ -31,13 +35,20 @@
 }
 
 #nav a.router-link-exact-active {
-  color: #42b983;
+  color: #42b983
+  
+  ;
 }
 
-h1,
-h2,
-h3,
-p {
-  text-transform: capitalize;
+@media (min-width: 1200px) {
+    .container {
+    max-width: 1200px important;
+    }
 }
+
+h4 {
+  font-weight: 600;
+  font-size: 21px;
+}
+
 </style>

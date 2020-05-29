@@ -1,15 +1,16 @@
 <template>
   <div>
      <b-row>
-       <b-col cols="12" class="bgr-light-blue">
-         <div class="d-flex single-car-section">
-            <Textcard />
-             <img class="single-card-section-image" :src="imgUrl">  
+       <b-col cols="12">
+         <div class="d-flex single-car-section" :class="{'reverse-row': reverse }">
+            <Textcard  :titleText="cardHeader" :subTitleText="subHeader" :innerText="text" />
+              
+            <img class="single-card-section-image" :src="imgUrl">  
           </div>
       </b-col>
     </b-row>
  </div>
-</template>
+</template>  
 
 <script>
 
@@ -21,7 +22,7 @@ export default {
       "cardHeader",
       "subHeader",
       "text",
-      "direction",
+      "reverse",
       "imgUrl"
   ],
   components: {
@@ -38,5 +39,9 @@ export default {
 .single-car-section {
     height: 260px;
 }
-  
+.reverse-row {
+  flex-direction: row-reverse;
+}
+
+
 </style>

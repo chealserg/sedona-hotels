@@ -2,135 +2,131 @@
   <div class="home">
     <Header />
     <Jumbotron />
-    <div>
-    <b-container class="central-text">
+    
+    <div class="central-text">
        <b-row>
           <b-col>
-            <h2>Sedona is a small city in Arizona, <br>
-            that desirved more attention!
-            </h2>
+            <h4 class="z-indexfixed">Sedona is a small city in Arizona, <br>
+            desirved more attention!
+            </h4>
             <p class="underline-text">Let's have a look why this place cooler than a Grand Canion"</p>
           </b-col>
        </b-row>
-    </b-container>
+    </div>
     
-    <b-container class="cont-adv">
-      <b-row>
-        <b-col cols="4" class="bgr-light-blue">
-          <textcard />
-        </b-col>
-        <b-col cols="8" class="w-100">
-          <div>
-             <img src="../assets/Adv-img1.png">
-          </div>
-        </b-col>
-      </b-row>
-    </b-container>
+    <SingleCardComponent
+      imgUrl="https://i.ibb.co/1Th914q/Adv-img1.png"
+      card-header="A Real City" 
+      sub-header="– №1 –" 
+      text="Sedona is not just a tourist attraction,\n here life goes on" />
+
+    <div class="d-flex">
+          <Iconcard v-for="cardIcon in cardIconInfo"
+                  :key="cardIcon.id"
+           :CardIcon="cardIcon.icon"
+           :titleIconText="cardIcon.header"
+           :IconCardText="cardIcon.text" />
+    </div>
+         
+    <SingleCardComponent
+      :reverse="true"
+      imgUrl="https://i.ibb.co/JcWyL4g/Adv-img2.png" 
+      cardHeader="There is a Devil's bridge" 
+      subHeader="– №4 –" 
+      text="Yes, take a walk on it if you dare " />
+
+     <div class="d-flex bgr-white">
+            <Textcard v-for="card in cardInfo" 
+                      :key="card.id"
+            :titleText="card.header"
+            :subTitleText="card.subHeader"
+            :innerText="card.text"
+            class="bg-light"
+             /> 
+    </div> 
+
+     <div class="findhotel bg-white">
+       <b-row>
+          <b-col>
+            <h3>Intrerested?</h3>
+            <p class="underline-text">Set up estematad date for your trip,<br>
+            we show you the best hotels in Sedona </p>
+          </b-col>
+       </b-row>
     </div>
 
-  <div>
-  <b-card-group deck>
-    <b-card title="Title" img-src="https://picsum.photos/300/300/?image=41" img-alt="Image" img-top>
-      <b-card-text>
-        This is a wider card with supporting text below as a natural lead-in to additional content.
-        This content is a little bit longer.
-      </b-card-text>
-      <template v-slot:footer>
-        <small class="text-muted">Last updated 3 mins ago</small>
-      </template>
-    </b-card>
-
-    <b-card title="Title" img-src="https://picsum.photos/300/300/?image=41" img-alt="Image" img-top>
-      <b-card-text>
-        This card has supporting text below as a natural lead-in to additional content.
-      </b-card-text>
-      <template v-slot:footer>
-        <small class="text-muted">Last updated 3 mins ago</small>
-      </template>
-    </b-card>
-
-    <b-card title="Title" img-src="https://picsum.photos/300/300/?image=41" img-alt="Image" img-top>
-      <b-card-text>
-        This is a wider card with supporting text below as a natural lead-in to additional content.
-        This card has even longer content than the first to show that equal height action.
-      </b-card-text>
-      <template v-slot:footer>
-        <small class="text-muted">Last updated 3 mins ago</small>
-      </template>
-    </b-card>
-  </b-card-group>
-</div>  
-
-
-    <div>
-     <b-card no-body class="overflow-hidden">
-        <b-row no-gutters>
-          <b-col md="8">
-            <img src="../assets/Adv-img1.png" style="width:100%">
-          </b-col>
-          <b-col md="4">
-            <b-card-body title="Horizontal Card">
-              <b-card-text>
-              This is a wider card with supporting text as a natural lead-in to additional content.
-              This content is a little bit longer.
-              </b-card-text>
-            </b-card-body>
-          </b-col>
-        </b-row>
-      </b-card>
-    </div>
-
-     <div>
-  <b-card-group class="bgr-grey" deck>
-    <b-card class="card-body no-border" title="Title" sub-title="– №3 –">
-      <b-card-text>
-        This is a wider card with supporting text below as a natural lead-in to additional content.
-        This content is a little bit longer.
-      </b-card-text>
-    </b-card>
-
-    <b-card class="card-body no-border" title="Title" sub-title="– №4 –">
-      <b-card-text>
-        This card has supporting text below as a natural lead-in to additional content.
-      </b-card-text>
-    </b-card>
-
-    <b-card class="card-body no-border" title="Title" sub-title="– №5 –">
-      <b-card-text>
-        This is a wider card with supporting text below as a natural lead-in to additional content.
-        This card has even longer content than the first to show that equal height action.
-      </b-card-text>
-    </b-card>
-  </b-card-group>
-</div>  
-
-
+    <SearchForm />
+    <GoogleMap />
+    <Footer />
 
   </div>
-
-
+     
 </template>
 
 <script>
-// @ is an alias to /src
 import Header from '@/components/Header.vue'
 import Jumbotron from '@/components/Jumbotron.vue'
+import SingleCardComponent from '@/components/SingleCardComponent.vue'
 import Textcard from '@/components/Textcard.vue'
+import Iconcard from '@/components/Iconcard.vue'
+import SearchForm from '@/components/SearchForm.vue'
+import GoogleMap from '@/components/GoogleMap.vue'
+import Footer from '@/components/Footer.vue'
 
 export default {
   name: 'Home',
   components: {
     Header,
     Jumbotron,
-    Textcard
+    SingleCardComponent,
+    Textcard,
+    Iconcard,
+    SearchForm,
+    GoogleMap,
+    Footer
+  },
+
+  data:function () { 
+  return {
+    cardInfo: [
+      {header:"A small\n area", subHeader:"– №3 –", text:"all sights\n sutuated close by", id:"1"},
+      {header:"Beatiful\n road", subHeader:"– №4 –", text:"the way from LA\n will not let you bored!", id:"2"},
+      {header:"Less\n tourists", subHeader:"– №5 –", text:"most of them heading to\n a crowded Grand Canyon", id:"3"}   
+    ],
+  
+    cardIconInfo: [
+      {icon:"https://i.ibb.co/FnjRSjm/icon-1.png", header:"Accomodation", text:"Reccomend to stay in the motel \n like in real movie!", id:"4"},
+      {icon:"https://i.ibb.co/njYbV00/icon-3.png", header:"Food", text:"Try out delicios burger special,\n you won't be disappointed ", id:"5"},
+      {icon:"https://i.ibb.co/0DV4FmY/icon-2.png", header:"Souvenirs", text:"Not only chiness-made,\n but also produced by local", id:"6"}   
+    ]
   }
+  }
+
 }
+
 </script>
 
 <style scoped>
-  .central-text {
-    padding-top: 40px;
+
+  p {
+    font-size: 14px;
   }
+
+  h3 {
+    font-size: 30px;
+  }
+
+   h4.card-title {
+    font-weight: 600;
+    font-size: 21px !important;
+  }
+
+  .central-text {
+    position: relative;
+    padding-top: 60px;
+    z-index: 1003;
+  }
+
   .underline-text {
     padding-top: 20px;
   }
@@ -138,20 +134,70 @@ export default {
     height: 260px;
   }
 
-  .w100 img {
-    width: 100%;
-  } 
-
-  .bgr-light-blue {
-    background-color:#81b3d2;
-  }
-  .bgr-grey {
-    
-    background-color: #eeeeee;
-  }
-
   .no-border {
+    border-radius: 0px;
     border: none;
     background-color:#eeeeee;
   } 
+
+  .card-body {
+    background-color: #81b3d2 !important;
+  }
+
+  .single-card-section-image {
+    width: calc(100% - 400px);
+  }
+
+  .single-car-section {
+    height: 260px;
+  }
+
+  .card-body p {
+    white-space: pre-line;
+    text-transform: uppercase;
+}
+.underline-text {
+    padding-bottom: 20px;
+    padding-top: 20px;
+ }
+
+ /*DECORATION BETWEEN TEXT AND JUMBOTRON SECTIONS*/
+.central-text:before {
+   content: " ";
+    position: absolute;
+    background: white;
+    height: 60px;
+    width: 380px;
+    transform: rotate(9deg);
+    left: 180px;
+    bottom: 170px;
+    z-index: 1003;
+}
+.central-text::after { 
+   content: " ";
+    position: absolute;
+    background: #fff;
+    height: 60px;
+    width: 380px;
+    transform: rotate(-9deg);
+    bottom: 170px;
+    z-index: 1002;
+ }
+
+ .z-indexfixed {
+   position: relative;
+   z-index: 1003;
+ }
+
+ h4 {
+   font-size:21px;
+   font-weight: 600;
+ }
+
+.findhotel {
+  padding-top: 60px;
+  min-height: 225px;
+}
+
+
 </style>
