@@ -31,7 +31,7 @@ export default {
 
 
 .card-body {
-    background-color: #ffffff;
+    /* background-color: #ffffff; */
     display: flex;
     flex-direction: column;
     align-items:center;

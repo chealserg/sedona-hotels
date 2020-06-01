@@ -3,9 +3,9 @@
   <b-card 
   :title="titleText"
   :sub-title="subTitleText"
-  sub-title-text-variant="white"
-  text-variant="white"
-  bg-variant="info" >
+  sub-title-text-variant="dark"
+  text-variant="dark"
+  bg-variant="light" >   
      <b-card-text>
          {{ innerText }}
     </b-card-text>
@@ -29,6 +29,16 @@ export default {
 <style scoped>
 
 
+h4 {
+  font-weight: 600;
+  font-size: 21px;
+}
+
+h6.card-subtitle.text-white.mb-2 {
+  margin: 0;
+  padding: 15px 0
+}
+
 .card {
     border: 0px;
     width: 100%;
@@ -39,35 +49,21 @@ export default {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  flex-wrap: wrap;
+
+  /* background-color: #eeeeee; */
 }
 
+.card-body p {
+    white-space: pre-line;
+
+}
 
 .card-wrap {
   display: flex;
   width: 400px;
   min-height: 260px;
 }
-
-h6.card-subtitle.text-white.mb-2 {
-  margin: 0;
-  padding: 15px 0
-}
-
-
-.card-body p {
-    white-space: pre-line;
-    text-transform: uppercase;
-}
-
-h4 {
-  font-weight: 600;
-  font-size: 21px;
-}
-
-.card-body {
-    background-color: #81b3d2;
-  }
-
 
 </style>
 

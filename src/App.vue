@@ -1,10 +1,10 @@
 <template>
   <div class="container">
     <div id="app">
-      <!-- <div id="nav"> -->
-        <!-- <router-link to="/">Home</router-link> |
-        <router-link to="/about">About</router-link> -->
-      <!-- </div> -->
+      <div id="nav">
+        <router-link to="/">Home</router-link> 
+        <router-link to="/Hotels">Hotels</router-link> 
+      </div> 
       <router-view/>
     </div>
   </div>
@@ -12,6 +12,17 @@
 
 <style>
 @import url('https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap');
+
+.container {
+  padding:0 !important;
+}
+
+@media (min-width: 1200px) {
+    .container {
+    max-width: 1200px !important;
+    }
+}
+
 #app {
   font-family: 'PT Sans', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -35,15 +46,7 @@
 }
 
 #nav a.router-link-exact-active {
-  color: #42b983
-  
-  ;
-}
-
-@media (min-width: 1200px) {
-    .container {
-    max-width: 1200px important;
-    }
+  color: #42b983;
 }
 
 h4 {

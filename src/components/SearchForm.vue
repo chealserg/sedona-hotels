@@ -1,6 +1,5 @@
 <template>
-
-<b-row class="text-center searchform">
+        <b-row class="text-center searchform">
    
         <div class="form-search">
             <div class="form-header-text">
@@ -10,33 +9,33 @@
             <div class="inner-form-content">
                 <div class="check-in-date">
                     <label for="check-in">check in:</label>
-                    <b-form-datepicker class="datefield" id="check-in" placeholder="24 April 2019" local="en"></b-form-datepicker>
+                    <b-form-datepicker class="datefield bgr-color-light-gray" id="check-in" placeholder="24 April 2019" local="en"></b-form-datepicker>
                 </div>
                 <div class="check-out-date">
                     <label for="check-out">check out:</label>
-                    <b-form-datepicker class="datefield" id="check-out" placeholder="4 July 2019" local="en"></b-form-datepicker>
-                </div>
+                    <b-form-datepicker class="datefield bgr-color-light-gray" id="check-out" placeholder="4 July 2019" local="en"></b-form-datepicker>
+                </div> 
                 <div class="d-inline-block">
                     <div class="adults">
                         <label for="adults-number">Adults:</label>
-                         <b-form-spinbutton id="adults-number" value="2" inline></b-form-spinbutton>
+                         <b-form-spinbutton id="adults-number" class="bgr-color-light-gray" placeholder="3" inline></b-form-spinbutton>
                     </div>
                     <div class="kids">
                          <label for="kids-number">Kids:</label>
-                        <b-form-spinbutton id="kids-number" value="0" inline></b-form-spinbutton>
+                        <b-form-spinbutton id="kids-number" class="bgr-color-light-gray"  placeholder="2" inline></b-form-spinbutton>
                     </div>
                  </div>
                 <div class="button-form">
                     <b-button block>search</b-button>
                 </div>
-        </div>
+        </div>  
    </div>
 </b-row>
 </template>
 
 <script>
 export default {
-
+   
 }
 </script>
 
@@ -44,9 +43,9 @@ export default {
 
 
 h4 {
- color: white;;
- font-size: 21px !important;
- font-weight: 600 !important;
+ color: white;
+ font-size: 21px;
+ font-weight: 600;
 }
 
 .searchform {
@@ -55,6 +54,11 @@ h4 {
 
 .datefield {
     width: 350px;
+    background-color:#f2f2f2;
+}
+
+.bgr-color-light-gray {
+     background-color:#f2f2f2;
 }
 
 .check-in-date,
@@ -95,7 +99,7 @@ h4 {
     justify-content: center;
     align-items: center;
 
-    background-color: #6c757d;
+    background-color: #766357;
     min-height: 85px;
 }
 
@@ -108,7 +112,6 @@ h4 {
 
 
     height: 400px;
-
     background-color: white;
 }
 

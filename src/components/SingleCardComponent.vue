@@ -3,8 +3,7 @@
      <b-row>
        <b-col cols="12">
          <div class="d-flex single-car-section" :class="{'reverse-row': reverse }">
-            <Textcard  :titleText="cardHeader" :subTitleText="subHeader" :innerText="text" />
-              
+            <Textcard  :titleText="cardHeader" :subTitleText="subHeader" :innerText="text" :class="{'single-card-styling': styleSingleCard }" />
             <img class="single-card-section-image" :src="imgUrl">  
           </div>
       </b-col>
@@ -23,12 +22,17 @@ export default {
       "subHeader",
       "text",
       "reverse",
-      "imgUrl"
+      "imgUrl",
+      "styleSingleCard"  
   ],
+
   components: {
     Textcard
   }
+
 }
+
+
 </script>
 
 <style scoped>
@@ -42,6 +46,8 @@ export default {
 .reverse-row {
   flex-direction: row-reverse;
 }
-
+.single-card-styling {
+  color: red;
+}
 
 </style>

@@ -34,7 +34,8 @@ export default {
     position: relative;
     background-image: url('../assets/main-bgr.jpg');
     height: 510px;
-    background-position: -60px -60px;
+    background-repeat: no-repeat;
+    background-position: 0px -50px;
 }
 
 
@@ -60,8 +61,8 @@ img.undertext {
     height: 60px;
     width: 300px;
     right: -5px;
-    bottom: -20px;
-    transform: rotate(-5deg);
+    bottom: -15px;
+    transform: rotate(-6deg);
     z-index: 1002;
 }
 
@@ -71,9 +72,9 @@ img.undertext {
     background: #ffffff;
     height: 60px;
     width: 300px;
-    bottom: -20px;
-    left: -5px;
-    transform: rotate(5deg);
+    bottom: -15px;
+    left: -10px;
+    transform: rotate(6deg);
     z-index: 1002;
 }
 

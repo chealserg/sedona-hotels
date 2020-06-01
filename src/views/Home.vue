@@ -9,18 +9,20 @@
             <h4 class="z-indexfixed">Sedona is a small city in Arizona, <br>
             desirved more attention!
             </h4>
-            <p class="underline-text">Let's have a look why this place cooler than a Grand Canion"</p>
+            <p class="underline-text">Let's have a look why this place cooler than a Grand Canion</p>
           </b-col>
        </b-row>
     </div>
     
     <SingleCardComponent
       imgUrl="https://i.ibb.co/1Th914q/Adv-img1.png"
-      card-header="A Real City" 
+      card-header="A Real
+      City" 
       sub-header="– №1 –" 
-      text="Sedona is not just a tourist attraction,\n here life goes on" />
+      text="Sedona is not just a tourist attraction,
+       here life goes on" />
 
-    <div class="d-flex">
+    <div class="d-flex flex-wrap">
           <Iconcard v-for="cardIcon in cardIconInfo"
                   :key="cardIcon.id"
            :CardIcon="cardIcon.icon"
@@ -30,18 +32,20 @@
          
     <SingleCardComponent
       :reverse="true"
+      :styleSingleCard="true"
       imgUrl="https://i.ibb.co/JcWyL4g/Adv-img2.png" 
       cardHeader="There is a Devil's bridge" 
       subHeader="– №4 –" 
-      text="Yes, take a walk on it if you dare " />
+      text="Yes, take a walk on it 
+      if you dare"
+       />
 
-     <div class="d-flex bgr-white">
+     <div class="d-flex flex-wrap">
             <Textcard v-for="card in cardInfo" 
                       :key="card.id"
             :titleText="card.header"
             :subTitleText="card.subHeader"
             :innerText="card.text"
-            class="bg-light"
              /> 
     </div> 
 
@@ -95,7 +99,7 @@ export default {
     ],
   
     cardIconInfo: [
-      {icon:"https://i.ibb.co/FnjRSjm/icon-1.png", header:"Accomodation", text:"Reccomend to stay in the motel \n like in real movie!", id:"4"},
+      {icon:"https://i.ibb.co/FnjRSjm/icon-1.png", header:"Accomodation", text:"Reccomend to stay in the motel\n like in real movie!", id:"4"},
       {icon:"https://i.ibb.co/njYbV00/icon-3.png", header:"Food", text:"Try out delicios burger special,\n you won't be disappointed ", id:"5"},
       {icon:"https://i.ibb.co/0DV4FmY/icon-2.png", header:"Souvenirs", text:"Not only chiness-made,\n but also produced by local", id:"6"}   
     ]
@@ -167,9 +171,9 @@ export default {
     position: absolute;
     background: white;
     height: 60px;
-    width: 380px;
+    width: 350px;
     transform: rotate(9deg);
-    left: 180px;
+    left: 250px;
     bottom: 170px;
     z-index: 1003;
 }
@@ -178,7 +182,7 @@ export default {
     position: absolute;
     background: #fff;
     height: 60px;
-    width: 380px;
+    width: 350px;
     transform: rotate(-9deg);
     bottom: 170px;
     z-index: 1002;
