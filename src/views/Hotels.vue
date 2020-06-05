@@ -5,20 +5,13 @@
     <SortItemsBlock />
     
     <HotelOptionCard 
-        imgUrl="https://i.ibb.co/QfYgnhF/Hotel-Amara.png"
-        value="7.2"
-        accomodation="Hotel"
-        price="From 80$" />
-     <HotelOptionCard 
-        imgUrl="https://i.ibb.co/J3ntjXQ/Desert-Quail.png"
-        value="8.3"
-        accomodation="Motel"
-        price="From 65$" />
-     <HotelOptionCard 
-        imgUrl="https://i.ibb.co/rszM3TQ/Villas-At-Poco.png"
-        value="3.6"
-        accomodation="Apartments"
-        price="From 45$" />
+        v-for="hotelCard in hotelInfo"
+          :key="hotelCard.id"
+        :itemImgUrl="hotelCard.img"
+        :itemRating="hotelCard.rate"
+        :itemPropertyType="hotelCard.type"
+        :itemPrice="hotelCard.price" />
+
     <Footer class="m-0 bg-white" />
   </div>
 </template>
@@ -39,6 +32,16 @@ export default {
   HotelOptionCard,
   SortItemsBlock,
   Footer
+  },
+
+  data:function () {
+    return {
+      hotelInfo: [
+        {img:"https://i.ibb.co/QfYgnhF/Hotel-Amara.png", rate:"7.2", type:"Hotel", price:"From 80$", amenities: [ {parking:"true", wifi:"true", pool:"true"}], id:"1"},
+        {img:"https://i.ibb.co/J3ntjXQ/Desert-Quail.png", rate:"8.3", type:"Motel", price:"From 65$", amenities: [ {parking:"true", wifi:"true", pool:"false"}], id:"2"},
+        {img:"https://i.ibb.co/rszM3TQ/Villas-At-Poco.png", rate:"3.6", type:"Apartments", price:"From 45$", amenities: [ {parking:"false", wifi:"true", pool:"false"}], id:"3"}
+      ]
+    }
   }
 }
 </script>

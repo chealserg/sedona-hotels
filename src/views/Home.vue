@@ -41,7 +41,10 @@
        />
 
      <div class="d-flex flex-wrap">
-            <Textcard v-for="card in cardInfo" 
+            <Textcard bgrColor="light"
+                      textColor="dark"
+                      subTitleColor="dark"
+            v-for="card in cardInfo" 
                       :key="card.id"
             :titleText="card.header"
             :subTitleText="card.subHeader"

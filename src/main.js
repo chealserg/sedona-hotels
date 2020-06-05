@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import App from './App.vue'
 import router from './router'
+
 // Importing Google maps plugin //
 import * as VueGoogleMaps from 'vue2-google-maps'
 

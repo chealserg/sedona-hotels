@@ -19,7 +19,7 @@
                         <div class="block-position d-flex flex-column align-items-start justify-content-center pl-4">
                
                         <h5 class="m-0 pb-4">Accomodation:</h5>
-                        <b-form-checkbox size="md" class="text-white pl-">Hostel</b-form-checkbox>
+                        <b-form-checkbox size="md" class="text-white pl-4">Hostel</b-form-checkbox>
                         <b-form-checkbox size="md" class="text-white">Motel</b-form-checkbox>
                         <b-form-checkbox size="md" class="text-white">Apartments</b-form-checkbox>
                         </div>
@@ -34,12 +34,10 @@
                          <label for="range-2" class="text-white align-self-start m-0 pb-3">Cost per night</label>
                             <div class="range-block-from-to d-inline-flex align-self-start align-items-center mb-3">
                                     <div class="w-50 text-white r-border">From 0</div> 
-                                     <!-- <div class="w-50 text-white">to 3000</div> -->
                                     <div class="w-50 text-white ">To {{ value+' usd' }}</div>
-                              </div>
-                            
-                              <b-form-input id="range-2" v-model="value" type="range" class="form-control-range" min="0" max="3000" step="200"></b-form-input>
-                             
+                             </div>
+                        
+                              <b-form-input id="range-2" v-model="value" type="range" class="form-control-range" min="0" max="150" step="5"></b-form-input>
 
                           <button type="button" class="btn btn-outline-light range-button mt-2">Show</button>
                     </div>
@@ -50,11 +48,17 @@
 
 <script>
 export default {
-    data() {
-      return {
-        value: '2'
-      }
+   
+    data:function () {
+    return {
+      value: '20',
+      hotelInfo: [
+        {img:"https://i.ibb.co/QfYgnhF/Hotel-Amara.png", rate:"7.2", type:"Hotel", price:"From 80$", amenities: [ {parking:"true", wifi:"true", pool:"true"}], id:"1"},
+        {img:"https://i.ibb.co/J3ntjXQ/Desert-Quail.png", rate:"8.3", type:"Motel", price:"From 65$", amenities: [ {parking:"true", wifi:"true", pool:"false"}], id:"2"},
+        {img:"https://i.ibb.co/rszM3TQ/Villas-At-Poco.png", rate:"3.6", type:"Apartments", price:"From 45$", amenities: [ {parking:"false", wifi:"true", pool:"false"}], id:"3"}
+      ]
     }
+  }
 }
 </script>
 

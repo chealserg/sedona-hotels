@@ -3,9 +3,9 @@
   <b-card 
   :title="titleText"
   :sub-title="subTitleText"
-  sub-title-text-variant="dark"
-  text-variant="dark"
-  bg-variant="light" >   
+  :sub-title-text-variant="subTitleColor"
+  :text-variant="textColor"
+  :bg-variant="bgrColor" >   
      <b-card-text>
          {{ innerText }}
     </b-card-text>
@@ -21,6 +21,9 @@ export default {
       "titleText",
       "subTitleText",
       "innerText",
+      "subTitleColor",
+      "textColor",
+      "bgrColor"
   ],
 }
 
@@ -51,7 +54,6 @@ h6.card-subtitle.text-white.mb-2 {
   justify-content: center;
   flex-wrap: wrap;
 
-  /* background-color: #eeeeee; */
 }
 
 .card-body p {
@@ -64,6 +66,8 @@ h6.card-subtitle.text-white.mb-2 {
   width: 400px;
   min-height: 260px;
 }
+
+  /* // "build": "vue-cli-service build", */
 
 </style>
 

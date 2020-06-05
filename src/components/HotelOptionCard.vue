@@ -4,13 +4,13 @@
           <b-col>
               <div class="singlehoteldesc d-flex align-items-center">
                     <div class="property-image">
-                        <img :src="imgUrl">  
+                        <img :src="itemImgUrl">  
                     </div>
                     <div class="property-parametrs text-left d-flex flex-column justify-content-between">
                         <h5>Amara Resort & Spa</h5>
                         <div class="d-inline-block pd-1">
-                            <div class="w-50 d-inline-block">{{ accomodation }}</div> 
-                            <div class="w-50 d-inline-block">{{ price }}</div>
+                            <div class="w-50 d-inline-block">{{ itemPropertyType }}</div> 
+                            <div class="w-50 d-inline-block">{{ ItemPrice }}</div>
                         </div>
                                                      
                     <div class="property-buttons">    
@@ -25,8 +25,8 @@
             <b-col>
                 <div class="property-raiting">
                     <div class="property-raiting-content">
-                        <b-form-rating variant="info" class="p-0 border-0" show-value-max="5"  v-model="value" readonly></b-form-rating>
-                          <p class="rating-subtext">Rating: {{ value }}</p>
+                        <b-form-rating variant="info" class="p-0 border-0"  v-model="itemRating" readonly></b-form-rating>
+                          <p class="rating-subtext">Rating: {{ itemRating }}</p>
                     </div>
                 </div>
             </b-col>
@@ -38,16 +38,11 @@
 export default {
   name: 'HotelOptionCard',
   props: [
-      "imgUrl",
-      "value",
-      "accomodation",
-      "price"
-  ],
-//   data() {
-//   return {
-//      value: 7.6
-//       }
-//     }
+      "itemImgUrl",
+      "itemRating",
+      "itemPropertyType",
+      "ItemPrice"
+  ],    
 }
 </script>
 
